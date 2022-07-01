@@ -1,0 +1,13 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.echo.triggered
+      requests:
+        - >-
+          curl --request GET http://google.at
+      subscriptionID: e285b320-efae-4e8b-b1e1-a0c9f59a6f0c
+      sendFinished: true
+      sendStarted: true
